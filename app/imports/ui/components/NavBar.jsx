@@ -24,13 +24,13 @@ const NavBar = () => {
         <Navbar.Collapse id={ComponentIDs.basicNavbarNav}>
           <Nav className="me-auto justify-content-start">
             {currentUser ? (
-              <Nav.Link as={NavLink} id={ComponentIDs.homeMenuItem} to="/home" key="home">Home</Nav.Link>
+              <Nav.Link as={NavLink} id={ComponentIDs.homeMenuItem} to="/myprofile" key="myprofile">My Profile</Nav.Link>
             ) : ''}
-            <Nav.Link as={NavLink} id={ComponentIDs.profilesMenuItem} to="/profiles" key="profiles">Profiles</Nav.Link>
-            <Nav.Link as={NavLink} id={ComponentIDs.projectsMenuItem} to="/projects" key="projects">Projects</Nav.Link>
-            <Nav.Link as={NavLink} id={ComponentIDs.interestsMenuItem} to="/interests" key="interests">Interests</Nav.Link>
+            <Nav.Link as={NavLink} id={ComponentIDs.profilesMenuItem} to="/listings" key="listings">Listings</Nav.Link>
+            <Nav.Link as={NavLink} id={ComponentIDs.projectsMenuItem} to="/projects" key="projects">(To be deleted)Projects</Nav.Link>
+            <Nav.Link as={NavLink} id={ComponentIDs.interestsMenuItem} to="/interests" key="interests">(tbd)Interests</Nav.Link>
             {currentUser ? (
-              [<Nav.Link as={NavLink} id={ComponentIDs.addProjectMenuItem} to="/addProject" key="addP">Add Project</Nav.Link>,
+              [<Nav.Link as={NavLink} id={ComponentIDs.addProjectMenuItem} to="/addProject" key="addP">(tbd)Add Project</Nav.Link>,
                 <Nav.Link as={NavLink} id={ComponentIDs.filterMenuItem} to="/filter" key="filter">Filter</Nav.Link>]
             ) : ''}
           </Nav>

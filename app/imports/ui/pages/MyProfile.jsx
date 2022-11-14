@@ -32,7 +32,7 @@ const makeSchema = (allInterests, allProjects) => new SimpleSchema({
 });
 
 /* Renders the Home Page: what appears after the user logs in. */
-const Home = () => {
+const MyProfile = () => {
 
   /* On submit, insert the data. */
   const submit = (data) => {
@@ -93,4 +93,4 @@ const Home = () => {
   ) : <LoadingSpinner />;
 };
 
-export default Home;
+export default MyProfile;

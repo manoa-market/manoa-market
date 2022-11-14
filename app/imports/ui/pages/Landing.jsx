@@ -15,6 +15,9 @@ const Landing = () => (
         </h3>
       </Container>
     </div>
+    <div id="centerImage">
+      <Image src="/images/landing-page.jpeg" width="100%" />
+    </div>
     <div className="landing-white-background">
       <Container className="justify-content-center text-center">
         <h2 style={{ color: '#376551' }}>Start by making your profile....</h2>

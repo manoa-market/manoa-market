@@ -14,7 +14,7 @@ const Footer = () => (
         Honolulu, HI 96822
         {' '}
         <br />
-        <a style={{ color: 'white' }} href="https://https://manoa-market.github.io/">https://https://manoa-market.github.io/</a>
+        <a style={{ color: 'white' }} href="https://manoa-market.github.io/">https://manoa-market.github.io/</a>
       </Col>
     </Container>
   </footer>
