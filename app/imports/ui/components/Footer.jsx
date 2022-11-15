@@ -18,6 +18,10 @@ const Footer = () => (
           Template Home
           Page
         </a>
+        <br />
+        <a href="/team">
+          About Us
+        </a>
       </Col>
     </Container>
   </footer>
