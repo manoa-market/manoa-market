@@ -3,8 +3,12 @@
 
 /* Set up some CSS variables to theme the application. */
 :root {
-  --matr-navbar-bg: #ECECEC;
-  --matr-navbar-bg-rgb: 236, 236, 236;
+  --matr-navbar-bg: #024731;
+  --matr-navbar-bg-rgb: 2, 71, 49;
+  --matr-navbar-text-color: white;
+  --matr-navbar-highlight-text: khaki;
+
+
   --bowfolio-navbar-bg: #376551;
   --bowfolio-navbar-bg-rgb: 55, 101, 81;
   --bowfolio-navbar-text: white;
@@ -15,14 +19,21 @@
  See https://getbootstrap.com/docs/5.2/customize/css-variables/
  */
 body {
-  --bs-light-rgb: var(--matr-navbar-bg-rgb);
-  --bs-dark: var(--bowfolio-navbar-bg);
-  --bs-dark-rgb: var(--bowfolio-navbar-bg-rgb);
+  --bs-dark: var(--matr-navbar-bg);
+  --bs-dark-rgb: var(--matr-navbar-bg-rgb);
+}
+
+body .navbar {
+  --bs-navbar-active-color: var(--matr-navbar-highlight-text);
+  --bs-navbar-brand-color: var(--matr-navbar-text-color);
+  --bs-navbar-brand-hover-color: var(--matr-navbar-highlight-text);
+  --bs-navbar-color: var(--matr-navbar-text-color);
+  --bs-navbar-hover-color: var(--matr-navbar-highlight-text);
 }
 
 /* Set the alert background on the signin and signup pages. */
 #signin-page .alert-light, #signup-page .alert-light {
-  --bs-alert-bg: var(--matr-navbar-bg);
+  --bs-alert-bg: var(--bs-white);
 }
 
 /* Define custom styles */
@@ -32,22 +43,18 @@ body {
   padding-top: 10px;
   padding-bottom: 20px;
 }
-.bg-light span, .bg-light a {
-  color:  var(--bowfolio-navbar-bg);
-}
 
-.bg-dark span, .bg-dark a {
-  color: var(--bowfolio-navbar-text);
-}
-
-.bg-dark a.nav-link.active {
-  color: var(--bowfolio-navbar-highlight-text);
+footer, footer a {
+  color: var(--matr-navbar-text-color);
 }
 
 .bg-dark a.dropdown-item {
-  color: var(--bowfolio-navbar-bg);
+  color: var(--matr-navbar-bg);
 }
 
+a:link {
+  text-decoration: none;
+}
 
 .landing-green-background {
   background-color: var(--bowfolio-navbar-bg);
@@ -65,11 +72,7 @@ body {
   background-color: var(--bowfolio-navbar-text);
   color: var(--bowfolio-navbar-bg);
   padding-top: 20px;
-}
-
-.reset-margins {
-  margin-top: 0;
-  margin-bottom: 0;
+  color: var(--matr-navbar-bg);
 }
 
 /*

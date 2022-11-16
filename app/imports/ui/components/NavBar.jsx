@@ -13,7 +13,7 @@ const NavBar = () => {
   }), []);
   const menuStyle = { marginBottom: '0px' };
   // const navbarClassName = loggedIn ? 'bg-dark' : 'bg-light';
-  const navbarClassName = 'bg-light';
+  const navbarClassName = 'bg-dark';
   return (
     <Navbar expand="lg" style={menuStyle} className={navbarClassName}>
       <Container>
@@ -24,14 +24,14 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-start">
             {currentUser ? ([
-              <Nav.Link id="add-stuff-nav" as={NavLink} to="/add" key="add">Add Stuff</Nav.Link>,
-              <Nav.Link id="list-stuff-nav" as={NavLink} to="/list" key="list">List Stuff</Nav.Link>,
-              <Nav.Link id="add-stuff-nav" as={NavLink} to="/listlisting" key="listlisting">Listings List</Nav.Link>,
-              <Nav.Link id="add-stuff-nav" as={NavLink} to="/addlisting" key="addlisting">Add Listing</Nav.Link>,
+              <Nav.Link id="add-stuff-nav" as={NavLink} to="/listlisting" key="listlisting">Listings</Nav.Link>,
+              <Nav.Link id="list-stuff-nav" as={NavLink} to="/list" key="list">Categories</Nav.Link>,
+              <Nav.Link id="add-stuff-nav" as={NavLink} to="/addlisting" key="addlisting">List an Item</Nav.Link>,
             ]) : ''}
             {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
               <Nav.Link id="list-stuff-admin-nav" as={NavLink} to="/admin" key="admin">Admin</Nav.Link>
             ) : ''}
+            <Nav.Link id="/" as={NavLink} to="/" key="/">FAQs</Nav.Link>
           </Nav>
           <Nav className="justify-content-end">
             {currentUser === '' ? (
