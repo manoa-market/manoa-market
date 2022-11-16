@@ -13,12 +13,13 @@ const NavBar = () => {
     loggedIn: !!Meteor.user(),
   }), []);
   const menuStyle = { marginBottom: '0px' };
-  const navbarClassName = loggedIn ? 'bg-dark' : 'bg-light';
+  // const navbarClassName = loggedIn ? 'bg-dark' : 'bg-light';
+  const navbarClassName = 'bg-light';
   return (
     <Navbar expand="lg" style={menuStyle} className={navbarClassName}>
       <Container>
         <Navbar.Brand as={NavLink} to="/" className="align-items-center">
-          <span style={{ fontWeight: 800, fontSize: '24px' }}><Image src="/images/logo.png" width={100} style={{ marginBottom: 1 }} /></span>
+          <span style={{ fontWeight: 800, fontSize: '24px' }}><Image src="/images/logo.png" width={100} style={{ marginBottom: 0 }} /></span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls={ComponentIDs.basicNavbarNav} />
         <Navbar.Collapse id={ComponentIDs.basicNavbarNav}>
@@ -27,10 +28,10 @@ const NavBar = () => {
               <Nav.Link as={NavLink} id={ComponentIDs.homeMenuItem} to="/myprofile" key="myprofile">My Profile</Nav.Link>
             ) : ''}
             <Nav.Link as={NavLink} id={ComponentIDs.profilesMenuItem} to="/listings" key="listings">Listings</Nav.Link>
-            <Nav.Link as={NavLink} id={ComponentIDs.projectsMenuItem} to="/projects" key="projects">(To be deleted)Projects</Nav.Link>
-            <Nav.Link as={NavLink} id={ComponentIDs.interestsMenuItem} to="/interests" key="interests">(tbd)Interests</Nav.Link>
+            <Nav.Link as={NavLink} id={ComponentIDs.projectsMenuItem} to="/projects" key="projects">Projects</Nav.Link>
+            <Nav.Link as={NavLink} id={ComponentIDs.interestsMenuItem} to="/interests" key="interests">Interests</Nav.Link>
             {currentUser ? (
-              [<Nav.Link as={NavLink} id={ComponentIDs.addProjectMenuItem} to="/addProject" key="addP">(tbd)Add Project</Nav.Link>,
+              [<Nav.Link as={NavLink} id={ComponentIDs.addProjectMenuItem} to="/addProject" key="addP">Add Project</Nav.Link>,
                 <Nav.Link as={NavLink} id={ComponentIDs.filterMenuItem} to="/filter" key="filter">Filter</Nav.Link>]
             ) : ''}
           </Nav>

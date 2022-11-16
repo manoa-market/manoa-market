@@ -43,6 +43,12 @@ body {
   padding-top: 20px;
 }
 
+.landing-lightgreen-background {
+  background-color: var(--bowfolio-navbar-bg);
+  color: var(--bowfolio-navbar-text);
+  padding-top: 20px;
+}
+
 .landing-white-background {
   background-color: var(--bowfolio-navbar-text);
   color: var(--bowfolio-navbar-bg);

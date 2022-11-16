@@ -5,56 +5,24 @@ import { PageIDs } from '../utilities/ids';
 /* A simple static component to render some text for the landing page. */
 const Landing = () => (
   <div id={PageIDs.landingPage}>
-    <div className="landing-green-background">
+    <div className="landing-lightgreen-background">
       <Container className="text-center">
-        <h1 style={{ paddingTop: '20px', color: 'white', fontSize: '36pt' }}>
+        <h2 style={{ color: 'white', fontSize: '30pt', fontWeight: '200' }}>
           Welcome to Manoa Market
-        </h1>
-        <h3 style={{ paddingBottom: '20px', color: 'white' }}>
+        </h2>
+        <h3 style={{ paddingBottom: '20px', color: 'white', fontWeight: '200' }}>
           Buy, Sell, and Trade items in the UH Community
         </h3>
       </Container>
     </div>
-    <div id="centerImage">
-      <Image src="/images/landing-page.jpeg" width="100%" />
-    </div>
     <div className="landing-white-background">
       <Container className="justify-content-center text-center">
-        <h2 style={{ color: '#376551' }}>Start by making your profile....</h2>
         <Row md={1} lg={2}>
-          <Col xs={6}>
-            <Image src="/images/home-page.png" width={500} />
+          <Col xs={3}>
+            <Image src="/images/furniture2.png" width={600} />
           </Col>
-          <Col xs={6}>
-            <Image src="/images/profiles-page.png" width={500} />
-          </Col>
-        </Row>
-      </Container>
-    </div>
-    <div className="landing-green-background">
-      <Container className="justify-content-center text-center">
-        <h2 style={{ color: 'white' }}>...then add your projects</h2>
-        <Row md={1} lg={2}>
-          <Col xs={6}>
-            <Image src="/images/add-project-page.png" width={500} />
-          </Col>
-          <Col xs={6}>
-            <Image src="/images/projects-page.png" width={500} />
-          </Col>
-        </Row>
-      </Container>
-    </div>
-    <div className="landing-white-background text-center">
-      <h2 style={{ color: '#376551' }}>
-        Connect to people and projects with shared interests!
-      </h2>
-      <Container>
-        <Row md={1} lg={2}>
-          <Col xs={6}>
-            <Image src="/images/interests-page.png" width={500} />
-          </Col>
-          <Col xs={6}>
-            <Image src="/images/filter-page.png" width={500} />
+          <Col xs={3}>
+            <Image src="/images/furniture.png" width={600} height={420} />
           </Col>
         </Row>
       </Container>
