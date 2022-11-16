@@ -5,6 +5,10 @@
 :root {
   --matr-navbar-bg: #ECECEC;
   --matr-navbar-bg-rgb: 236, 236, 236;
+  --bowfolio-navbar-bg: #376551;
+  --bowfolio-navbar-bg-rgb: 55, 101, 81;
+  --bowfolio-navbar-text: white;
+  --bowfolio-navbar-highlight-text: var(--bs-gray-500);
 }
 
 /* Change bootstrap variable values.
@@ -12,6 +16,8 @@
  */
 body {
   --bs-light-rgb: var(--matr-navbar-bg-rgb);
+  --bs-dark: var(--bowfolio-navbar-bg);
+  --bs-dark-rgb: var(--bowfolio-navbar-bg-rgb);
 }
 
 /* Set the alert background on the signin and signup pages. */
@@ -26,3 +32,98 @@ body {
   padding-top: 10px;
   padding-bottom: 20px;
 }
+.bg-light span, .bg-light a {
+  color:  var(--bowfolio-navbar-bg);
+}
+
+.bg-dark span, .bg-dark a {
+  color: var(--bowfolio-navbar-text);
+}
+
+.bg-dark a.nav-link.active {
+  color: var(--bowfolio-navbar-highlight-text);
+}
+
+.bg-dark a.dropdown-item {
+  color: var(--bowfolio-navbar-bg);
+}
+
+
+.landing-green-background {
+  background-color: var(--bowfolio-navbar-bg);
+  color: var(--bowfolio-navbar-text);
+  padding-top: 20px;
+}
+
+.landing-lightgreen-background {
+  background-color: var(--bowfolio-navbar-bg);
+  color: var(--bowfolio-navbar-text);
+  padding-top: 20px;
+}
+
+.landing-white-background {
+  background-color: var(--bowfolio-navbar-text);
+  color: var(--bowfolio-navbar-bg);
+  padding-top: 20px;
+}
+
+.reset-margins {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
+
+:root {
+  --bowfolio-navbar-bg: #376551;
+  --bowfolio-navbar-bg-rgb: 55, 101, 81;
+  --bowfolio-navbar-text: white;
+  --bowfolio-navbar-highlight-text: var(--bs-gray-500);
+}
+
+body {
+  --bs-dark: var(--bowfolio-navbar-bg);
+  --bs-dark-rgb: var(--bowfolio-navbar-bg-rgb);
+}
+
+.bg-light span, .bg-light a {
+  color:  var(--bowfolio-navbar-bg);
+}
+
+.bg-dark span, .bg-dark a {
+  color: var(--bowfolio-navbar-text);
+}
+
+.bg-dark a.nav-link.active {
+  color: var(--bowfolio-navbar-highlight-text);
+}
+
+.bg-dark a.dropdown-item {
+  color: var(--bowfolio-navbar-bg);
+}
+
+
+.landing-green-background {
+  background-color: var(--bowfolio-navbar-bg);
+  color: var(--bowfolio-navbar-text);
+  padding-top: 20px;
+}
+
+.landing-lightgreen-background {
+  background-color: var(--bowfolio-navbar-bg);
+  color: var(--bowfolio-navbar-text);
+  padding-top: 20px;
+}
+
+.landing-white-background {
+  background-color: var(--bowfolio-navbar-text);
+  color: var(--bowfolio-navbar-bg);
+  padding-top: 20px;
+}
+
+.reset-margins {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+*/
