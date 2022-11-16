@@ -11,9 +11,11 @@ const NavBar = () => {
   const { currentUser } = useTracker(() => ({
     currentUser: Meteor.user() ? Meteor.user().username : '',
   }), []);
-
+  const menuStyle = { marginBottom: '0px' };
+  // const navbarClassName = loggedIn ? 'bg-dark' : 'bg-light';
+  const navbarClassName = 'bg-light';
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg" style={menuStyle} className={navbarClassName}>
       <Container>
         <Navbar.Brand as={NavLink} to="/" className="align-items-center">
           <span style={{ fontWeight: 800, fontSize: '24px' }}><Image src="/images/logo.png" width={100} style={{ marginBottom: 0 }} /></span>

@@ -3,18 +3,17 @@ import { Col, Container, Image, Row } from 'react-bootstrap';
 
 /* A simple static component to render some text for the landing page. */
 const Landing = () => (
-  <Container id="landing-page" fluid className="py-3">
-    <div className="landing-lightgreen-background">
-      <Container className="text-center">
-        <h2 style={{ color: 'white', fontSize: '30pt', fontWeight: '200' }}>
+  <div className="landing-lightgreen-background">
+    <Container className="text-center">
+      <h2 style={{ color: 'white', fontSize: '30pt', fontWeight: '200' }}>
           Welcome to Manoa Market
-        </h2>
-        <h3 style={{ paddingBottom: '20px', color: 'white', fontWeight: '200' }}>
+      </h2>
+      <h3 style={{ paddingBottom: '20px', color: 'white', fontWeight: '200' }}>
           Buy, Sell, and Trade items in the UH Community
-        </h3>
-      </Container>
-    </div>
-  </Container>
+      </h3>
+    </Container>
+  </div>
+
 );
 
 export default Landing;
