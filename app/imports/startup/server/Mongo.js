@@ -15,7 +15,6 @@ const addListingData = (data) => {
   Listings.collection.insert(data);
 };
 
-
 // Initialize the StuffsCollection if empty.
 if (Stuffs.collection.find().count() === 0) {
   if (Meteor.settings.defaultData) {

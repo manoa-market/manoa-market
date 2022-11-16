@@ -9,7 +9,7 @@ import Listing from '../components/Listing';
 /* Renders a table containing all of the Listing documents. Use <ListingItem> to render each row. */
 const ListListings = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
-  const { ready,listings } = useTracker(() => {
+  const { ready, listings } = useTracker(() => {
     // Note that this subscription will get cleaned up
     // when your component is unmounted or deps change.
     // Get access to Stuff documents.
@@ -25,18 +25,18 @@ const ListListings = () => {
   }, []);
 
   return (ready ? (
-      <Container className="py-3">
-        <Row className="justify-content-center">
-          <Col md={7}>
-            <Col className="text-center">
-              <h2>Listings List</h2>
-            </Col>
-            <Row xs={1} md={2} lg={3} className="g-4">
-              {listings.map((listing) => (<Col key={listing._id}><Listing listing={listing} /></Col>))}
-            </Row>
+    <Container className="py-3">
+      <Row className="justify-content-center">
+        <Col md={7}>
+          <Col className="text-center">
+            <h2>Listings List</h2>
           </Col>
-        </Row>
-      </Container>
+          <Row xs={1} md={2} lg={3} className="g-4">
+            {listings.map((listing) => (<Col key={listing._id}><Listing listing={listing} /></Col>))}
+          </Row>
+        </Col>
+      </Row>
+    </Container>
   ) : <LoadingSpinner />);
 };
 

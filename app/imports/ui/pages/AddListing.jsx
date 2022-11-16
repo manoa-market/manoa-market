@@ -27,44 +27,44 @@ const AddListing = () => {
 
   // On submit, insert the data.
   const submit = (data, formRef) => {
-    const { itemName, itemImage, condition,price, description } = data;
+    const { itemName, itemImage, condition, price, description } = data;
     const owner = Meteor.user().username;
     Listings.collection.insert(
-        { itemName, condition, owner, price, itemImage, description },
-        (error) => {
-          if (error) {
-            swal('Error', error.message, 'error');
-          } else {
-            swal('Success', 'Item added successfully', 'success');
-            formRef.reset();
-          }
-        },
+      { itemName, condition, owner, price, itemImage, description },
+      (error) => {
+        if (error) {
+          swal('Error', error.message, 'error');
+        } else {
+          swal('Success', 'Item added successfully', 'success');
+          formRef.reset();
+        }
+      },
     );
   };
 
   // Render the form. Use Uniforms: https://github.com/vazco/uniforms
   let fRef = null;
   return (
-      <Container className="py-3">
-        <Row className="justify-content-center">
-          <Col xs={5}>
-            <Col className="text-center"><h2>Add Listing</h2></Col>
-            <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
-              <Card>
-                <Card.Body>
-                  <TextField name="itemName" />
-                  <NumField name="price" decimal={null} />
-                  <TextField name="itemImage" />
-                  <TextField name="description" />
-                  <SelectField name="condition" />
-                  <SubmitField value="Submit" />
-                  <ErrorsField />
-                </Card.Body>
-              </Card>
-            </AutoForm>
-          </Col>
-        </Row>
-      </Container>
+    <Container className="py-3">
+      <Row className="justify-content-center">
+        <Col xs={5}>
+          <Col className="text-center"><h2>Add Listing</h2></Col>
+          <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
+            <Card>
+              <Card.Body>
+                <TextField name="itemName" />
+                <NumField name="price" decimal={null} />
+                <TextField name="itemImage" />
+                <TextField name="description" />
+                <SelectField name="condition" />
+                <SubmitField value="Submit" />
+                <ErrorsField />
+              </Card.Body>
+            </Card>
+          </AutoForm>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
