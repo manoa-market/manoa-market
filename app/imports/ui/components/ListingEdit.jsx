@@ -1,11 +1,10 @@
 import React from 'react';
-import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import { Card, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 /** Renders a single row in the List Listings table. See pages/ListListing.jsx. */
-const Listing = ({ listing }) => (
+const ListingEdit = ({ listing }) => (
   <Card className="h-100">
     <Card.Header>
       <Card.Title>{listing.itemName}</Card.Title>
@@ -17,11 +16,12 @@ const Listing = ({ listing }) => (
       <Image src={listing.itemImage} width={100} />
       <Card.Text>{listing.description}</Card.Text>
     </Card.Body>
+    <Link to={`/editlisting/${listing._id}`}>Edit</Link>
   </Card>
 );
 
 // Require a document to be passed to this component.
-Listing.propTypes = {
+ListingEdit.propTypes = {
   listing: PropTypes.shape({
     itemName: PropTypes.string,
     itemImage: PropTypes.string,
@@ -33,4 +33,4 @@ Listing.propTypes = {
   }).isRequired,
 };
 
-export default Listing;
+export default ListingEdit;

@@ -31,7 +31,7 @@ Meteor.publish(Stuffs.adminPublicationName, function () {
 });
 
 Meteor.publish(Listings.adminPublicationName, function () {
-    return Listings.collection.find();
+  return Listings.collection.find();
 });
 
 // alanning:roles publication

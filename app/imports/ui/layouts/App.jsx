@@ -20,6 +20,7 @@ import ListListing from '../pages/ListListing';
 import AddListing from '../pages/AddListing';
 import FAQ from '../pages/FAQ';
 import ProfileListing from '../pages/ProfileListing';
+import EditListing from '../pages/EditListing';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => (
@@ -39,6 +40,7 @@ const App = () => (
         <Route path="/addlisting" element={<ProtectedRoute><AddListing /></ProtectedRoute>} />
         <Route path="/list" element={<ProtectedRoute><ListStuff /></ProtectedRoute>} />
         <Route path="/add" element={<ProtectedRoute><AddStuff /></ProtectedRoute>} />
+        <Route path="/editlisting/:_id" element={<ProtectedRoute><EditListing /></ProtectedRoute>} />
         <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
         <Route path="/admin" element={<AdminProtectedRoute><ListStuffAdmin /></AdminProtectedRoute>} />
         <Route path="/notauthorized" element={<NotAuthorized />} />

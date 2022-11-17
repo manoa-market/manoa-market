@@ -4,7 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Listings } from '../../api/listing/Listing';
-import Listing from '../components/Listing';
+import ListingEdit from '../components/ListingEdit';
 
 /* Renders a table containing all of the Listing documents. Use <ListingItem> to render each row. */
 const ProfileListings = () => {
@@ -32,7 +32,7 @@ const ProfileListings = () => {
             <h2>Your Listings</h2>
           </Col>
           <Row xs={1} md={2} lg={3} className="g-4">
-            {listings.map((listing) => (<Col key={listing._id}><Listing listing={listing} /></Col>))}
+            {listings.map((listing) => (<Col key={listing._id}><ListingEdit listing={listing} /></Col>))}
           </Row>
         </Col>
       </Row>
