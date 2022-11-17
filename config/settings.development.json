@@ -1,7 +1,8 @@
 {
   "defaultAccounts": [
     { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "john@foo.com", "password": "changeme" }
+    { "email": "john@foo.com", "password": "changeme" },
+    { "email": "bill@foo.com", "password": "changeme"}
   ],
 
   "defaultData": [
@@ -12,7 +13,8 @@
   ],
   "defaultListing": [
     { "itemName": "Surfboard", "description": "One Cherry Surfboard", "owner": "john@foo.com", "itemImage": "google.png",
-      "price": 5, "condition": "excellent"}
+      "price": 5, "condition": "excellent"},
+    { "itemName": "Laptop", "description": "One Cherry laptop", "owner": "bill@foo.com", "itemImage": "google.png",
+      "price": 10, "condition": "excellent"}
   ]
-
 }

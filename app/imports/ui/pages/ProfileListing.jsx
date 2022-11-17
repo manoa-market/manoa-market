@@ -7,13 +7,13 @@ import { Listings } from '../../api/listing/Listing';
 import Listing from '../components/Listing';
 
 /* Renders a table containing all of the Listing documents. Use <ListingItem> to render each row. */
-const ListListings = () => {
+const ProfileListings = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { ready, listings } = useTracker(() => {
     // Note that this subscription will get cleaned up
     // when your component is unmounted or deps change.
     // Get access to Stuff documents.
-    const subscription = Meteor.subscribe(Listings.adminPublicationName);
+    const subscription = Meteor.subscribe(Listings.userPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready();
     // Get the Stuff documents
@@ -29,7 +29,7 @@ const ListListings = () => {
       <Row className="justify-content-center">
         <Col md={7}>
           <Col className="text-center">
-            <h2>Listings List</h2>
+            <h2>Your Listings</h2>
           </Col>
           <Row xs={1} md={2} lg={3} className="g-4">
             {listings.map((listing) => (<Col key={listing._id}><Listing listing={listing} /></Col>))}
@@ -40,4 +40,4 @@ const ListListings = () => {
   ) : <LoadingSpinner />);
 };
 
-export default ListListings;
+export default ProfileListings;

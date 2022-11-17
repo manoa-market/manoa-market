@@ -31,10 +31,7 @@ Meteor.publish(Stuffs.adminPublicationName, function () {
 });
 
 Meteor.publish(Listings.adminPublicationName, function () {
-  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
     return Listings.collection.find();
-  }
-  return this.ready();
 });
 
 // alanning:roles publication

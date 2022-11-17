@@ -19,6 +19,7 @@ import Team from '../pages/Team';
 import ListListing from '../pages/ListListing';
 import AddListing from '../pages/AddListing';
 import FAQ from '../pages/FAQ';
+import ProfileListing from '../pages/ProfileListing';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => (
@@ -33,6 +34,7 @@ const App = () => (
         <Route path="/signout" element={<SignOut />} />
         <Route path="/team" element={<Team />} />
         <Route path="/listlisting" element={<ListListing />} />
+        <Route path="/profilelisting" element={<ProtectedRoute><ProfileListing /></ProtectedRoute>} />
         <Route path="/home" element={<ProtectedRoute><Landing /></ProtectedRoute>} />
         <Route path="/addlisting" element={<ProtectedRoute><AddListing /></ProtectedRoute>} />
         <Route path="/list" element={<ProtectedRoute><ListStuff /></ProtectedRoute>} />
