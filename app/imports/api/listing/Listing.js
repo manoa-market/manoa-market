@@ -17,6 +17,11 @@ class ListingsCollection {
       description: String,
       itemImage: String,
       price: String,
+      negotiable: {
+        type: String,
+        allowedValues: ['Yes', 'No'],
+        defaultValue: 'Yes',
+      },
       owner: String,
       condition: {
         type: String,

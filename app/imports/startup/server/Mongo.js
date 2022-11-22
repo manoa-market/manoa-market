@@ -14,7 +14,7 @@ const addListingData = (data) => {
   console.log(`  Adding: ${data.itemName} (${data.owner})`);
   Listings.collection.insert(data);
 };
-
+z
 // Initialize the StuffsCollection if empty.
 if (Stuffs.collection.find().count() === 0) {
   if (Meteor.settings.defaultData) {
