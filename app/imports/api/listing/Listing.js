@@ -16,7 +16,7 @@ class ListingsCollection {
       itemName: String,
       description: String,
       itemImage: String,
-      price: String,
+      price: Number,
       negotiable: {
         type: String,
         allowedValues: ['Yes', 'No'],
@@ -39,6 +39,6 @@ class ListingsCollection {
 
 /**
  * The singleton instance of the StuffsCollection.
- * @type {StuffsCollection}
+ * @type {ListingsCollection}
  */
 export const Listings = new ListingsCollection();

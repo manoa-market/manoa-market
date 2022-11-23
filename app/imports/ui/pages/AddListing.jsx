@@ -59,8 +59,8 @@ const AddListing = () => {
               <Card.Body>
                 <TextField name="itemName" />
                 <Row>
-                  <Col><NumField name="price" decimal={null}/></Col>
-                  <Col><SelectField name="negotiable"/></Col>
+                  <Col><NumField name="price" decimal={null} /></Col>
+                  <Col><SelectField name="negotiable" /></Col>
                 </Row>
                 <SelectField name="condition" />
                 <TextField name="itemImage" />
