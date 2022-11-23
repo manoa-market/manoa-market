@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 /** Renders a single row in the List Listings table. See pages/MyListings.jsx. */
 const Listing = ({ listing }) => (
@@ -16,7 +17,7 @@ const Listing = ({ listing }) => (
       <Card.Text>{listing.description}</Card.Text>
     </Card.Body>
     <Card.Footer>
-      <Card.Link href="#">Contact Seller</Card.Link>
+      <Link to={`/edit/${listing._id}`}>Edit</Link>
     </Card.Footer>
   </Card>
 );

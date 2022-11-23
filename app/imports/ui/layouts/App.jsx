@@ -8,7 +8,6 @@ import Landing from '../pages/Landing';
 import ListStuff from '../pages/ListStuff';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddStuff from '../pages/AddStuff';
-import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
 import SignUp from '../pages/SignUp';
 import SignOut from '../pages/SignOut';
@@ -16,11 +15,11 @@ import NavBar from '../components/NavBar';
 import SignIn from '../pages/SignIn';
 import NotAuthorized from '../pages/NotAuthorized';
 import Team from '../pages/Team';
-import ListListing from '../pages/ListListing';
 import AddListing from '../pages/AddListing';
 import FAQ from '../pages/FAQ';
-import ProfileListing from '../pages/ProfileListing';
 import EditListing from '../pages/EditListing';
+import MyListings from '../pages/MyListings';
+import AllListings from '../pages/AllListings';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => (
@@ -34,14 +33,13 @@ const App = () => (
         <Route path="/faq" element={<FAQ />} />
         <Route path="/signout" element={<SignOut />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/listlisting" element={<ListListing />} />
-        <Route path="/profilelisting" element={<ProtectedRoute><ProfileListing /></ProtectedRoute>} />
+        <Route path="/allListings" element={<AllListings />} />
+        <Route path="/myListings" element={<ProtectedRoute><MyListings /></ProtectedRoute>} />
         <Route path="/home" element={<ProtectedRoute><Landing /></ProtectedRoute>} />
         <Route path="/addlisting" element={<ProtectedRoute><AddListing /></ProtectedRoute>} />
         <Route path="/list" element={<ProtectedRoute><ListStuff /></ProtectedRoute>} />
         <Route path="/add" element={<ProtectedRoute><AddStuff /></ProtectedRoute>} />
-        <Route path="/editlisting/:_id" element={<ProtectedRoute><EditListing /></ProtectedRoute>} />
-        <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
+        <Route path="/edit/:_id" element={<ProtectedRoute><EditListing /></ProtectedRoute>} />
         <Route path="/admin" element={<AdminProtectedRoute><ListStuffAdmin /></AdminProtectedRoute>} />
         <Route path="/notauthorized" element={<NotAuthorized />} />
         <Route path="*" element={<NotFound />} />
