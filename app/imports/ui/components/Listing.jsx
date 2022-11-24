@@ -14,6 +14,8 @@ const Listing = ({ listing }) => (
     <Card.Body>
       <Card.Subtitle>Condition: {listing.condition}</Card.Subtitle>
       <Card.Text>{listing.description}</Card.Text>
+      <Card.Subtitle>Categories: </Card.Subtitle>
+      <Card.Text>{listing.category}</Card.Text>
     </Card.Body>
     <Card.Footer>
       <Card.Link href="#">Contact Seller</Card.Link>
@@ -28,6 +30,7 @@ Listing.propTypes = {
     itemImage: PropTypes.string,
     price: PropTypes.number,
     negotiable: PropTypes.string,
+    category: PropTypes.string,
     condition: PropTypes.string,
     description: PropTypes.string,
     owner: PropTypes.string,

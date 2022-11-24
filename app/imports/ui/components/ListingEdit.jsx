@@ -27,6 +27,7 @@ ListingEdit.propTypes = {
     itemImage: PropTypes.string,
     price: PropTypes.number,
     condition: PropTypes.string,
+    category: PropTypes.string,
     description: PropTypes.string,
     owner: PropTypes.string,
     _id: PropTypes.string,

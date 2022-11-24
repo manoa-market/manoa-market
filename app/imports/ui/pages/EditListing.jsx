@@ -32,8 +32,8 @@ const EditListing = () => {
   // console.log('EditContact', doc, ready);
   // On successful submit, insert the data.
   const submit = (data) => {
-    const { itemName, itemImage, condition, price, description, negotiable } = data;
-    Listings.collection.update(_id, { $set: { itemName, itemImage, condition, price, description, negotiable } }, (error) => (error ?
+    const { itemName, itemImage, condition, price, description, negotiable, category } = data;
+    Listings.collection.update(_id, { $set: { itemName, itemImage, condition, price, description, negotiable, category } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
   };
@@ -54,6 +54,7 @@ const EditListing = () => {
                 <SelectField name="condition" />
                 <TextField name="itemImage" />
                 <LongTextField name="description" />
+                <SelectField name="category" showInlineError placeholder="Categories" multiple checkboxes />
                 <SubmitField value="Submit" />
                 <ErrorsField />
               </Card.Body>
