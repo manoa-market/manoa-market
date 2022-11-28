@@ -47,6 +47,7 @@ const EditListing = () => {
             <Card>
               <Card.Body>
                 <TextField name="itemName" />
+                <SelectField name="category" />
                 <Row>
                   <Col><NumField name="price" decimal={null} /></Col>
                   <Col><SelectField name="negotiable" /></Col>

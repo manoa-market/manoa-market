@@ -11,6 +11,7 @@ const ListingEdit = ({ listing }) => (
       <Card.Subtitle>Price: ${listing.price}</Card.Subtitle>
       <Card.Subtitle>Condition {listing.condition}</Card.Subtitle>
       <Card.Subtitle>Owner {listing.owner}</Card.Subtitle>
+      <Card.Subtitle>Category {listing.category}</Card.Subtitle>
     </Card.Header>
     <Card.Body>
       <Image src={listing.itemImage} width={100} />
@@ -28,6 +29,7 @@ ListingEdit.propTypes = {
     price: PropTypes.number,
     condition: PropTypes.string,
     description: PropTypes.string,
+    category: PropTypes.string,
     owner: PropTypes.string,
     _id: PropTypes.string,
   }).isRequired,

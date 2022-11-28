@@ -28,6 +28,10 @@ class ListingsCollection {
         allowedValues: ['excellent', 'good', 'fair', 'poor'],
         defaultValue: 'good',
       },
+      category: {
+        type: String,
+        allowedValues: ['Books', 'Electronics', 'Furniture', 'Sporting'],
+      },
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);

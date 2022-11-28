@@ -23,6 +23,11 @@ const formSchema = new SimpleSchema({
     allowedValues: ['excellent', 'good', 'fair', 'poor'],
     defaultValue: 'good',
   },
+  category: {
+    type: String,
+    allowedValues: ['Books', 'Electronics', 'Furniture', 'Sporting'],
+    defaultValue: 'good',
+  },
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
@@ -32,10 +37,10 @@ const AddListing = () => {
 
   // On submit, insert the data.
   const submit = (data, formRef) => {
-    const { itemName, itemImage, condition, price, description, negotiable } = data;
+    const { itemName, itemImage, category, condition, price, description, negotiable } = data;
     const owner = Meteor.user().username;
     Listings.collection.insert(
-      { itemName, condition, owner, price, itemImage, description, negotiable },
+      { itemName, condition, owner, category, price, itemImage, description, negotiable },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -58,6 +63,7 @@ const AddListing = () => {
             <Card>
               <Card.Body>
                 <TextField name="itemName" />
+                <SelectField name="category" />
                 <Row>
                   <Col><NumField name="price" decimal={null} /></Col>
                   <Col><SelectField name="negotiable" /></Col>
