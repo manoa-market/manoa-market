@@ -2,16 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Listings } from '../../api/listing/Listing';
 
 /** Renders a single row in the List Listings table. See pages/ListListing.jsx. */
 const ListingEdit = ({ listing }) => (
   <Card className="h-100">
     <Card.Header>
       <Card.Title>{listing.itemName}</Card.Title>
-      <Card.Subtitle>Price: ${listing.price}</Card.Subtitle>
+      <Card.Subtitle>Price: {listing.price}</Card.Subtitle>
       <Card.Subtitle>Condition {listing.condition}</Card.Subtitle>
       <Card.Subtitle>Owner {listing.owner}</Card.Subtitle>
       <Card.Subtitle>Category {listing.category}</Card.Subtitle>
+      <Card.Subtitle>Sold Status: {listing.sold}</Card.Subtitle>
     </Card.Header>
     <Card.Body>
       <Image src={listing.itemImage} width={100} />
@@ -31,6 +33,7 @@ ListingEdit.propTypes = {
     description: PropTypes.string,
     category: PropTypes.string,
     owner: PropTypes.string,
+    sold: PropTypes.bool,
     _id: PropTypes.string,
   }).isRequired,
 };

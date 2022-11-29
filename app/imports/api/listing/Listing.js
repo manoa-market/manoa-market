@@ -32,6 +32,10 @@ class ListingsCollection {
         type: String,
         allowedValues: ['Books', 'Electronics', 'Furniture', 'Sporting'],
       },
+      sold: {
+        type: Boolean,
+        defaultValue: false,
+      },
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);

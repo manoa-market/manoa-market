@@ -14,15 +14,12 @@
   "defaultListing": [
     { "itemName": "Surfboard", "description": "One Cherry Surfboard", "owner": "john@foo.com", "itemImage": "google.png",
       "price": 5, "condition": "excellent",
-      "category": "Sporting"
+      "category": "Sporting",
+      "sold": false
     },
     { "itemName": "Laptop", "description": "One Cherry laptop", "owner": "bill@foo.com", "itemImage": "google.png",
       "price": 10, "condition": "excellent",
-      "category": "Electronics"
-    },
-    { "itemName": "Herman Miller Aeron", "description": "Good Chair", "owner": "bill@foo.com", "itemImage": "google.png",
-      "price": 100, "condition": "excellent",
-      "category": "Furniture"
+      "category": "Electronics", "sold": false
     }
   ]
 }

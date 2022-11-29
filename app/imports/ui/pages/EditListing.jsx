@@ -1,7 +1,7 @@
 import React from 'react';
 import swal from 'sweetalert';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import { AutoForm, ErrorsField, LongTextField, NumField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import { AutoForm, BoolField, ErrorsField, LongTextField, NumField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
@@ -32,8 +32,8 @@ const EditListing = () => {
   // console.log('EditContact', doc, ready);
   // On successful submit, insert the data.
   const submit = (data) => {
-    const { itemName, itemImage, condition, price, description, negotiable } = data;
-    Listings.collection.update(_id, { $set: { itemName, itemImage, condition, price, description, negotiable } }, (error) => (error ?
+    const { itemName, itemImage, condition, price, description, negotiable, sold } = data;
+    Listings.collection.update(_id, { $set: { itemName, itemImage, condition, price, description, negotiable, sold } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
   };
@@ -48,6 +48,7 @@ const EditListing = () => {
               <Card.Body>
                 <TextField name="itemName" />
                 <SelectField name="category" />
+                <BoolField name="sold" />
                 <Row>
                   <Col><NumField name="price" decimal={null} /></Col>
                   <Col><SelectField name="negotiable" /></Col>
