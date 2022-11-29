@@ -27,6 +27,9 @@ const AllListings = () => {
   return (ready ? (
     <Container className="py-3">
       <Col>
+        <Search
+      </Col>
+      <Col>
         <Row className="justify-content-center">
           <Col md={7}>
             <Col className="text-center">
