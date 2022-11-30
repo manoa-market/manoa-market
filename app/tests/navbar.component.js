@@ -42,15 +42,24 @@ class NavBar {
     await testController.click('#navbar-sign-out');
   }
 
-  /** Pull down login menu, go to sign up page. */
-  async gotoSignUpPage(testController) {
-    await this.ensureLogout(testController);
-    const visible = await Selector('#basic-navbar-nav').visible;
-    if (!visible) {
-      await testController.click('button.navbar-toggler');
-    }
-    await testController.click('#login-dropdown');
-    await testController.click('#login-dropdown-sign-up');
+  /** go to FAQ page. */
+  async gotofaqPage(testController) {
+    await testController.click('#faq-nav');
+  }
+
+  /** go to my listings page. */
+  async gotoalllistingsPage(testController) {
+    await testController.click('#all-listings-nav');
+  }
+
+  /** go to my listings page. */
+  async gotomylistingsPage(testController) {
+    await testController.click('#my-listings-nav');
+  }
+
+  /** go to my listings page. */
+  async gotoaddlistingPage(testController) {
+    await testController.click('#add-listing-nav');
   }
 }
 
