@@ -23,7 +23,6 @@ const AllListings = () => {
       ready: rdy,
     };
   }, []);
-  
   return (ready ? (
     <Container className="py-3">
       <Col>
