@@ -46,6 +46,10 @@ class NavBar {
   async gotofaqPage(testController) {
     await testController.click('#faq-nav');
   }
+
+  async gotoalllistingsPage(testController) {
+    await testController.click('#all-listings-nav');
+  }
 }
 
 export const navBar = new NavBar();

@@ -3,6 +3,7 @@ import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';
 import { faqPage } from './FAQ.Page';
+import { alllistingsPage } from './alllistings.page';
 
 /* global fixture:false, test:false */
 
@@ -29,4 +30,17 @@ test('Test the FAQ page', async (testController) => {
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.gotofaqPage(testController);
   await faqPage.isDisplayed(testController);
+  await navBar.isLoggedIn(testController, credentials.username);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
+});
+
+test('Test the all listings page', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoalllistingsPage(testController);
+  await alllistingsPage.isDisplayed(testController);
+  await navBar.isLoggedIn(testController, credentials.username);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
 });

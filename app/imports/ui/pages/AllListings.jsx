@@ -25,7 +25,7 @@ const AllListings = () => {
   }, []);
 
   return (ready ? (
-    <Container className="py-3">
+    <Container id="alllistings-page" className="py-3">
       <Col>
         <Row className="justify-content-center">
           <Col md={7}>
