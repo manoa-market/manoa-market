@@ -42,13 +42,24 @@ class NavBar {
     await testController.click('#navbar-sign-out');
   }
 
-  /** Pull down login menu, go to FAQ page. */
+  /** go to FAQ page. */
   async gotofaqPage(testController) {
     await testController.click('#faq-nav');
   }
 
+  /** go to my listings page. */
   async gotoalllistingsPage(testController) {
     await testController.click('#all-listings-nav');
+  }
+
+  /** go to my listings page. */
+  async gotomylistingsPage(testController) {
+    await testController.click('#my-listings-nav');
+  }
+
+  /** go to my listings page. */
+  async gotoaddlistingPage(testController) {
+    await testController.click('#add-listing-nav');
   }
 }
 
