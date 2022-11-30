@@ -44,10 +44,7 @@ class NavBar {
 
   /** Pull down login menu, go to FAQ page. */
   async gotofaqPage(testController) {
-    const visible = await Selector('#basic-navbar-nav').visible;
-    if (!visible) {
-      await testController.click('nav-link-faq-nav');
-    }
+    await testController.click('#faq-nav');
   }
 }
 
