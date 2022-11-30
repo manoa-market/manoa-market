@@ -7,6 +7,7 @@ import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-bootstrap5';
 
+let isHawaiiEmail = true;
 /**
  * SignUp component is similar to signin component, but we create a new user instead.
  */
@@ -24,7 +25,10 @@ const SignUp = ({ location }) => {
   const submit = (doc) => {
     const { email, password } = doc;
     Accounts.createUser({ email, username: email, password }, (err) => {
-      if (err) {
+      if (!email.includes('@hawaii.edu')) {
+        isHawaiiEmail = false;
+        setError('Not a @hawaii.edu account');
+      } else if (err) {
         setError(err.reason);
       } else {
         setError('');
@@ -60,7 +64,7 @@ const SignUp = ({ location }) => {
             {' '}
             <Link to="/signin">here</Link>
           </Alert>
-          {error === '' ? (
+          {error === '' || isHawaiiEmail === true ? (
             ''
           ) : (
             <Alert variant="danger">
