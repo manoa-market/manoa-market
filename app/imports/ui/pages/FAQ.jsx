@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import Map from '../components/Map';
 
 const FAQ = () => (
-  <Container className="py-5">
+  <Container id="faq-page" className="py-5">
     <h1 className="text-center">Frequently Asked Questions</h1>
     <h3>What is the Manoa Market?</h3>
     <p>
