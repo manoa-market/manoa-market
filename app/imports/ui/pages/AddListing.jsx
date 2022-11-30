@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import { AutoForm, ErrorsField, NumField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import { AutoForm, ErrorsField, LongTextField, NumField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
@@ -12,10 +12,20 @@ const formSchema = new SimpleSchema({
   itemName: String,
   itemImage: String,
   price: Number,
+  negotiable: {
+    type: String,
+    allowedValues: ['Yes', 'No'],
+    defaultValue: 'Yes',
+  },
   description: String,
   condition: {
     type: String,
     allowedValues: ['excellent', 'good', 'fair', 'poor'],
+    defaultValue: 'good',
+  },
+  category: {
+    type: String,
+    allowedValues: ['Books', 'Electronics', 'Furniture', 'Sporting'],
     defaultValue: 'good',
   },
 });
@@ -27,10 +37,10 @@ const AddListing = () => {
 
   // On submit, insert the data.
   const submit = (data, formRef) => {
-    const { itemName, itemImage, condition, price, description } = data;
+    const { itemName, itemImage, category, condition, price, description, negotiable } = data;
     const owner = Meteor.user().username;
     Listings.collection.insert(
-      { itemName, condition, owner, price, itemImage, description },
+      { itemName, condition, owner, category, price, itemImage, description, negotiable },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -53,10 +63,14 @@ const AddListing = () => {
             <Card>
               <Card.Body>
                 <TextField name="itemName" />
-                <NumField name="price" decimal={null} />
-                <TextField name="itemImage" />
-                <TextField name="description" />
+                <SelectField name="category" />
+                <Row>
+                  <Col><NumField name="price" decimal={null} /></Col>
+                  <Col><SelectField name="negotiable" /></Col>
+                </Row>
                 <SelectField name="condition" />
+                <TextField name="itemImage" />
+                <LongTextField name="description" />
                 <SubmitField value="Submit" />
                 <ErrorsField />
               </Card.Body>

@@ -1,7 +1,10 @@
 {
   "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "john@foo.com", "password": "changeme" }
+    { "email": "admin@hawaii.edu", "password": "changeme", "role": "admin" },
+    { "email": "john@hawaii.edu", "password": "changeme" },
+    { "email": "bill@hawaii.edu", "password": "changeme"},
+    { "email": "mel@hawaii.edu", "password": "changeme"},
+    { "email": "dan@hawaii.edu", "password": "changeme"}
   ],
 
   "defaultData": [
@@ -11,8 +14,24 @@
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
   "defaultListing": [
-    { "itemName": "Surfboard", "description": "One Cherry Surfboard", "owner": "john@foo.com", "itemImage": "google.png",
-      "price": 5, "condition": "excellent"}
+    { "itemName": "Surfboard", "description": "One Cherry Surfboard", "owner": "john@hawaii.edu", "itemImage": "google.png",
+      "price": 5, "condition": "excellent",
+      "category": "Sporting",
+      "sold": false
+    },
+    { "itemName": "Laptop", "description": "One Cherry laptop", "owner": "john@hawaii.edu", "itemImage": "google.png",
+      "price": 10, "condition": "excellent",
+      "category": "Electronics", "sold": false
+    },
+    { "itemName": "Herman Miller Aeron", "description": "Good Chair", "owner": "mel@hawaii.edu", "itemImage": "google.png",
+      "price": 100, "condition": "excellent",
+      "category": "Furniture",
+      "sold": false
+    },
+    { "itemName": "Bicycle", "description": "Good Bike", "owner": "john@hawaii.edu", "itemImage": "google.png",
+      "price": 5, "condition": "excellent",
+      "category": "Sporting",
+      "sold": false
+    }
   ]
-
 }

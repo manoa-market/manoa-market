@@ -16,12 +16,25 @@ class ListingsCollection {
       itemName: String,
       description: String,
       itemImage: String,
-      price: String,
+      price: Number,
+      negotiable: {
+        type: String,
+        allowedValues: ['Yes', 'No'],
+        defaultValue: 'Yes',
+      },
       owner: String,
       condition: {
         type: String,
         allowedValues: ['excellent', 'good', 'fair', 'poor'],
         defaultValue: 'good',
+      },
+      category: {
+        type: String,
+        allowedValues: ['Books', 'Electronics', 'Furniture', 'Sporting'],
+      },
+      sold: {
+        type: Boolean,
+        defaultValue: false,
       },
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
@@ -34,6 +47,6 @@ class ListingsCollection {
 
 /**
  * The singleton instance of the StuffsCollection.
- * @type {StuffsCollection}
+ * @type {ListingsCollection}
  */
 export const Listings = new ListingsCollection();
