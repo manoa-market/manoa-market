@@ -65,4 +65,7 @@ test('Test the add listing page', async (testController) => {
   await navBar.gotoaddlistingPage(testController);
   await addlistingPage.isDisplayed(testController);
   await addlistingPage.addListing(testController, sampleitem.name, sampleitem.price, sampleitem.image, sampleitem.description);
+  await navBar.isLoggedIn(testController, credentials.username);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
 });
