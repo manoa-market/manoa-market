@@ -14,36 +14,36 @@
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
   "defaultListing": [
-    { "itemName": "Surfboard", "description": "One Cherry Surfboard", "owner": "john@hawaii.edu", "itemImage": "google.png",
+    { "itemName": "Surfboard", "description": "One Cherry Surfboard", "owner": "john@hawaii.edu", "itemImage": "https://solidsurf.co/wp-content/uploads/2019/11/IMG_0424.png",
       "price": 5, "condition": "excellent",
       "category": "Sporting",
       "sold": false
     },
-    { "itemName": "Laptop", "description": "One Cherry laptop", "owner": "john@hawaii.edu", "itemImage": "google.png",
+    { "itemName": "Laptop", "description": "One Cherry laptop", "owner": "john@hawaii.edu", "itemImage": "https://cdn.pocket-lint.com/r/s/1201x/assets/images/155087-laptops-review-microsoft-surface-laptop-go-review-image1-6ezitk9ymj.jpg",
       "price": 10, "condition": "excellent",
       "category": "Electronics", "sold": false
     },
-    { "itemName": "Herman Miller Aeron", "description": "Good Chair", "owner": "mel@hawaii.edu", "itemImage": "google.png",
+    { "itemName": "Herman Miller Aeron", "description": "Good Chair", "owner": "mel@hawaii.edu", "itemImage": "https://ohrhomeofficesolutions.com/wp-content/uploads/2020/10/Herman-Miller-Aeron-Fully-Loaded-2-scaled.jpg",
       "price": 100, "condition": "excellent",
       "category": "Furniture",
       "sold": false
     },
-    { "itemName": "Bicycle", "description": "Good Bike", "owner": "john@hawaii.edu", "itemImage": "google.png",
+    { "itemName": "Bicycle", "description": "Good Bike", "owner": "john@hawaii.edu", "itemImage": "https://dekeslaytonmuseum.org/wp-content/uploads/2019/01/2003.0006.0001-G-J-Champion-11-e1549001868403.jpg",
       "price": 5, "condition": "excellent",
       "category": "Sporting",
       "sold": false
     },
-    { "itemName": "Best Book", "description": "He Good", "owner": "john@hawaii.edu", "itemImage": "google.png",
+    { "itemName": "Best Book", "description": "He Good", "owner": "john@hawaii.edu", "itemImage": "https://m.media-amazon.com/images/I/51IWL7y8ecL._AC_SY780_.jpg",
       "price": 100, "condition": "excellent",
       "category": "Books",
       "sold": false
     },
-    { "itemName": "Stamps", "description": "They cool", "owner": "mel@hawaii.edu", "itemImage": "google.png",
+    { "itemName": "Stamps", "description": "They cool", "owner": "mel@hawaii.edu", "itemImage": "https://technabob.com/blog/wp-content/uploads/2013/02/star_wars_yoda.jpg",
       "price": 55, "condition": "excellent",
       "category": "Misc",
       "sold": false
     },
-    { "itemName": "T-Shirt", "description": "Cool Shirt", "owner": "mel@hawaii.edu", "itemImage": "google.png",
+    { "itemName": "T-Shirt", "description": "Cool Shirt", "owner": "mel@hawaii.edu", "itemImage": "https://www.bookstore.hawaii.edu/manoa/outerweb/product_images/SHIRTVINTAGEUHRAINBOWlBLACK.png",
       "price": 55, "condition": "excellent",
       "category": "Clothing",
       "sold": false

@@ -8,9 +8,9 @@ const Listing = ({ listing }) => (
     <Card.Img variant="top" src={listing.itemImage} width={100} />
     <Card.Header>
       <Card.Title>{listing.itemName}</Card.Title>
-      <Card.Subtitle>Price: {listing.price} </Card.Subtitle>
+      <Card.Subtitle>Price: ${listing.price} </Card.Subtitle>
       <Card.Subtitle>Negotiable: {listing.negotiable}</Card.Subtitle>
-      <Card.Subtitle>Listing {listing.category}</Card.Subtitle>
+      <Card.Subtitle>Listing: {listing.category}</Card.Subtitle>
     </Card.Header>
     <Card.Body>
       <Card.Subtitle>Condition: {listing.condition}</Card.Subtitle>

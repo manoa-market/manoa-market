@@ -8,7 +8,7 @@ const ListingEdit = ({ listing }) => (
   <Card className="h-100">
     <Card.Header>
       <Card.Title>{listing.itemName}</Card.Title>
-      <Card.Subtitle>Price: {listing.price}</Card.Subtitle>
+      <Card.Subtitle>Price: ${listing.price}</Card.Subtitle>
       <Card.Subtitle>Condition {listing.condition}</Card.Subtitle>
       <Card.Subtitle>Owner {listing.owner}</Card.Subtitle>
       <Card.Subtitle>Category {listing.category}</Card.Subtitle>
