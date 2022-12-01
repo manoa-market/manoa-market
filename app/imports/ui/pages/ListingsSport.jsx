@@ -2,7 +2,7 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
-import _ from 'underscore';
+import { _ } from 'meteor/underscore';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Listings } from '../../api/listing/Listing';
 import Listing from '../components/Listing';
