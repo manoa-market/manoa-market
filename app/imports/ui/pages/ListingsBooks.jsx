@@ -8,7 +8,7 @@ import Listing from '../components/Listing';
 import CategorySearchBar from '../components/CategorySearchBar';
 
 /* Renders a table containing all of the Listing documents. Use <ListingItem> to render each row. */
-const AllListings = () => {
+const ListingsBooks = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { ready, listings } = useTracker(() => {
     // Note that this subscription will get cleaned up
@@ -20,13 +20,16 @@ const AllListings = () => {
     // Get the Stuff documents
     const Items = Listings.collection.find({}).fetch();
     const unsoldItems = _.filter(Items, function (data) { return data.sold === false; });
+    // eslint-disable-next-line no-undef
+    const bookFiltered = _.filter(unsoldItems, function (data) { return data.category === 'Books'; });
     return {
-      listings: unsoldItems,
+      listings: bookFiltered,
       ready: rdy,
     };
   }, []);
+
   return (ready ? (
-    <Container id="alllistings-page" className="py-3">
+    <Container id="book-listings-page" className="py-3">
       <Col>
         <CategorySearchBar />
       </Col>
@@ -34,7 +37,7 @@ const AllListings = () => {
         <Row className="justify-content-center">
           <Col md={7}>
             <Col className="text-center">
-              <h2>All Listings</h2>
+              <h2>Book Listings</h2>
             </Col>
             <Row xs={1} md={2} lg={3} className="g-4">
               {listings.map((listing) => (<Col key={listing._id}><Listing listing={listing} /></Col>))}
@@ -46,4 +49,4 @@ const AllListings = () => {
   ) : <LoadingSpinner />);
 };
 
-export default AllListings;
+export default ListingsBooks;

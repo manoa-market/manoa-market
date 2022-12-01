@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { Listings } from '../../api/listing/Listing';
 
 /** Renders a single row in the List Listings table. See pages/ListListing.jsx. */
 const ListingEdit = ({ listing }) => (

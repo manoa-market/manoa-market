@@ -32,6 +32,21 @@
       "price": 5, "condition": "excellent",
       "category": "Sporting",
       "sold": false
+    },
+    { "itemName": "Best Book", "description": "He Good", "owner": "john@hawaii.edu", "itemImage": "google.png",
+      "price": 100, "condition": "excellent",
+      "category": "Books",
+      "sold": false
+    },
+    { "itemName": "Stamps", "description": "They cool", "owner": "mel@hawaii.edu", "itemImage": "google.png",
+      "price": 55, "condition": "excellent",
+      "category": "Misc",
+      "sold": false
+    },
+    { "itemName": "T-Shirt", "description": "Cool Shirt", "owner": "mel@hawaii.edu", "itemImage": "google.png",
+      "price": 55, "condition": "excellent",
+      "category": "Clothing",
+      "sold": false
     }
   ]
 }
