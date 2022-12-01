@@ -30,7 +30,7 @@ class ListingsCollection {
       },
       category: {
         type: String,
-        allowedValues: ['Books', 'Electronics', 'Furniture', 'Sporting'],
+        allowedValues: ['Books', 'Clothing','Electronics', 'Furniture', 'Sporting','Misc'],
       },
       sold: {
         type: Boolean,

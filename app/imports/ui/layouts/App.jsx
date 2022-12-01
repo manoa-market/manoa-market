@@ -21,6 +21,10 @@ import EditListing from '../pages/EditListing';
 import MyListings from '../pages/MyListings';
 import AllListings from '../pages/AllListings';
 import ListingsSport from '../pages/ListingsSport';
+import ListingsBooks from '../pages/ListingsBooks';
+import ListingsClothing from '../pages/ListingsClothing';
+import ListingsFurniture from '../pages/ListingsFurniture';
+import ListingsMisc from '../pages/ListingsMisc';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => (
@@ -36,6 +40,10 @@ const App = () => (
         <Route path="/team" element={<Team />} />
         <Route path="/allListings" element={<AllListings />} />
         <Route path="/myListings" element={<ProtectedRoute><MyListings /></ProtectedRoute>} />
+        <Route path="/clothingListings" element={<ProtectedRoute><ListingsClothing /></ProtectedRoute>} />
+        <Route path="/bookListings" element={<ProtectedRoute><ListingsBooks /></ProtectedRoute>} />
+        <Route path="/furnitureListings" element={<ProtectedRoute><ListingsFurniture /></ProtectedRoute>} />
+        <Route path="/miscListings" element={<ProtectedRoute><ListingsMisc /></ProtectedRoute>} />
         <Route path="/sportListings" element={<ProtectedRoute><ListingsSport /></ProtectedRoute>} />
         <Route path="/home" element={<ProtectedRoute><Landing /></ProtectedRoute>} />
         <Route path="/addlisting" element={<ProtectedRoute><AddListing /></ProtectedRoute>} />
