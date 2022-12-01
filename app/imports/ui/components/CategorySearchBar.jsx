@@ -23,6 +23,7 @@ const CategorySearchBar = () => {
             <Nav.Link id="all-listings-nav" as={NavLink} to="/allListings" key="allListings">All</Nav.Link>
             <Nav.Link id="book-listing" as={NavLink} to="/bookListings" key="bookListings">Books</Nav.Link>,
             <Nav.Link id="clothing-listing" as={NavLink} to="/clothingListings" key="clothingListings">Clothing</Nav.Link>,
+            <Nav.Link id="electronics-listing" as={NavLink} to="/electronicsListings" key="electronicsListings">Electronics</Nav.Link>,
             <Nav.Link id="furniture-listing" as={NavLink} to="/furnitureListings" key="furnitureListings">Furniture</Nav.Link>,
             <Nav.Link id="sport-listing" as={NavLink} to="/sportListings" key="sportListings">Sporting</Nav.Link>,
             <Nav.Link id="misc-listing" as={NavLink} to="/miscListings" key="miscListings">Miscellaneous</Nav.Link>,
