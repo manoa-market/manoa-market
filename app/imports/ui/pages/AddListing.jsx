@@ -26,7 +26,7 @@ const formSchema = new SimpleSchema({
   category: {
     type: String,
     allowedValues: ['Books', 'Electronics', 'Furniture', 'Sporting', 'Misc'],
-    defaultValue: 'good',
+    defaultValue: 'Misc',
   },
 });
 
