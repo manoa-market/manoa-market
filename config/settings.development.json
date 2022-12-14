@@ -15,37 +15,67 @@
   ],
   "defaultListing": [
     { "itemName": "Surfboard", "description": "One Cherry Surfboard", "owner": "john@hawaii.edu", "itemImage": "https://solidsurf.co/wp-content/uploads/2019/11/IMG_0424.png",
-      "price": 5, "condition": "excellent",
+      "price": 120, "condition": "excellent", "negotiable": "No",
       "category": "Sporting",
       "sold": false
     },
     { "itemName": "Laptop", "description": "One Cherry laptop", "owner": "john@hawaii.edu", "itemImage": "https://cdn.pocket-lint.com/r/s/1201x/assets/images/155087-laptops-review-microsoft-surface-laptop-go-review-image1-6ezitk9ymj.jpg",
-      "price": 10, "condition": "excellent",
+      "price": 70, "condition": "poor", "negotiable": "Yes",
       "category": "Electronics", "sold": false
     },
     { "itemName": "Herman Miller Aeron", "description": "Good Chair", "owner": "mel@hawaii.edu", "itemImage": "https://ohrhomeofficesolutions.com/wp-content/uploads/2020/10/Herman-Miller-Aeron-Fully-Loaded-2-scaled.jpg",
-      "price": 100, "condition": "excellent",
+      "price": 100, "condition": "good", "negotiable": "No",
       "category": "Furniture",
       "sold": false
     },
     { "itemName": "Bicycle", "description": "Good Bike", "owner": "john@hawaii.edu", "itemImage": "https://dekeslaytonmuseum.org/wp-content/uploads/2019/01/2003.0006.0001-G-J-Champion-11-e1549001868403.jpg",
-      "price": 5, "condition": "excellent",
+      "price": 80, "condition": "excellent", "negotiable": "Yes",
       "category": "Sporting",
       "sold": false
     },
-    { "itemName": "Best Book", "description": "He Good", "owner": "john@hawaii.edu", "itemImage": "https://m.media-amazon.com/images/I/51IWL7y8ecL._AC_SY780_.jpg",
-      "price": 100, "condition": "excellent",
+    { "itemName": "Best Book", "description": "Good Book", "owner": "john@hawaii.edu", "itemImage": "https://m.media-amazon.com/images/I/51IWL7y8ecL._AC_SY780_.jpg",
+      "price": 100, "condition": "excellent", "negotiable": "No",
       "category": "Books",
       "sold": false
     },
     { "itemName": "Stamps", "description": "They cool", "owner": "mel@hawaii.edu", "itemImage": "https://technabob.com/blog/wp-content/uploads/2013/02/star_wars_yoda.jpg",
-      "price": 55, "condition": "excellent",
+      "price": 55, "condition": "excellent", "negotiable": "No",
       "category": "Misc",
       "sold": false
     },
     { "itemName": "T-Shirt", "description": "Cool Shirt", "owner": "mel@hawaii.edu", "itemImage": "https://www.bookstore.hawaii.edu/manoa/outerweb/product_images/SHIRTVINTAGEUHRAINBOWlBLACK.png",
-      "price": 55, "condition": "excellent",
+      "price": 55, "condition": "excellent", "negotiable": "No",
       "category": "Clothing",
+      "sold": false
+    },
+    { "itemName": "Side Table", "description": "Moving out of dorms, trying to get rid of furniture asap.", "owner": "dan@hawaii.edu", "itemImage": "https://ii.worldmarket.com/fcgi-bin/iipsrv.fcgi?FIF=/images/worldmarket/source/55808_XXX_v1.tif&wid=2000&cvt=jpeg",
+      "price": 50, "condition": "good", "negotiable": "Yes",
+      "category": "Furniture",
+      "sold": false
+    },
+    { "itemName": "Tennis Racket", "description": "Barely used, no longer needed.", "owner": "bill@hawaii.edu", "itemImage": "https://m.media-amazon.com/images/I/51i3Eq2N8AL._AC_SY1000_.jpg",
+      "price": 35, "condition": "good", "negotiable": "No",
+      "category": "Sporting",
+      "sold": false
+    },
+    { "itemName": "Paper Envelope", "description": "24 paper envelopes unused,", "owner": "bill@hawaii.edu", "itemImage": "https://imgs.michaels.com/MAM/assets/1/5E3C12034D34434F8A9BAAFDDF0F8E1B/img/012D3072DA5E418085E3744807EEC028/10542613_25.jpg?fit=inside|540:540",
+      "price": 15, "condition": "good", "negotiable": "No",
+      "category": "Misc",
+      "sold": false
+    },
+    { "itemName": "Sun Hat", "description": "Found extra hat in closet, not used.", "owner": "bill@hawaii.edu", "itemImage": "https://www.rei.com/media/product/186001",
+      "price": 25, "condition": "excellent", "negotiable": "Yes",
+      "category": "Clothing",
+      "sold": false
+    },
+    { "itemName": "Organic Chemistry 6th Edition", "description": "Finished class", "owner": "bill@hawaii.edu", "itemImage": "https://m.media-amazon.com/images/I/81KZWF128BL.jpg",
+      "price": 125, "condition": "excellent", "negotiable": "No",
+      "category": "Books",
+      "sold": false
+    },
+    { "itemName": "Headphones", "description": "Bought a new pair, getting rid of old ones", "owner": "dan@hawaii.edu", "itemImage": "https://www.marshallheadphones.com/on/demandware.static/-/Sites-zs-master-catalog/default/dw23d08e4c/images/marshall/headphones/major-iv/high-res/pos-marshall-major-iv-black-01.png",
+      "price": 85, "condition": "good", "negotiable": "Yes",
+      "category": "Electronics",
       "sold": false
     }
   ]
