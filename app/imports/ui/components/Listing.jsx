@@ -8,16 +8,16 @@ const Listing = ({ listing }) => (
     <Card.Img variant="top" src={listing.itemImage} width={100} />
     <Card.Header>
       <Card.Title>{listing.itemName}</Card.Title>
-      <Card.Subtitle>Price: {listing.price} </Card.Subtitle>
+      <Card.Subtitle>Price: ${listing.price} </Card.Subtitle>
       <Card.Subtitle>Negotiable: {listing.negotiable}</Card.Subtitle>
-      <Card.Subtitle>Listing {listing.category}</Card.Subtitle>
+      <Card.Text>Tag: {listing.category}</Card.Text>
     </Card.Header>
     <Card.Body>
       <Card.Subtitle>Condition: {listing.condition}</Card.Subtitle>
       <Card.Text>{listing.description}</Card.Text>
     </Card.Body>
     <Card.Footer>
-      <Card.Link href="#">Contact Seller</Card.Link>
+      <Card.Text><strong>Contact Info:</strong> {listing.owner}</Card.Text>
     </Card.Footer>
   </Card>
 );

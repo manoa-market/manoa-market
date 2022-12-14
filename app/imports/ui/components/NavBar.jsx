@@ -23,9 +23,8 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-start">
-            <Nav.Link id="all-listings-nav" as={NavLink} to="/allListings" key="allListings">All Listings</Nav.Link>
             {currentUser ? ([
-              <Nav.Link id="list-stuff-nav" as={NavLink} to="/list" key="list">Categories</Nav.Link>,
+              <Nav.Link id="all-listings-nav" as={NavLink} to="/allListings" key="allListings">Listings</Nav.Link>,
               <Nav.Link id="my-listings-nav" as={NavLink} to="/myListings" key="myListings">My Listings</Nav.Link>,
               <Nav.Link id="add-listing-nav" as={NavLink} to="/addlisting" key="addlisting">List an Item</Nav.Link>,
             ]) : ''}
