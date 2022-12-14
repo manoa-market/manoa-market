@@ -18,7 +18,7 @@ const FAQ = () => (
     <h4>How do I make a purchase?</h4>
     <p>
       When you come across a listing which interests you, please contact seller via email to discuss transaction details.
-      Depending on listing details, buyers may be open trade or negotiate items up for sale.
+      Depending on listing details, buyers may be open to trade or negotiate items up for sale.
       Payment methods are to be decided by the seller.
       Recommended methods of payment are venmo, paypal, or in person with cash.
     </p>

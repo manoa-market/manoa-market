@@ -11,6 +11,7 @@ const Listing = ({ listing }) => (
       <Card.Title>{listing.itemName}</Card.Title>
       <Card.Subtitle>Price: ${listing.price} </Card.Subtitle>
       <Card.Subtitle>Negotiable: {listing.negotiable}</Card.Subtitle>
+      <Card.Text>Tag: {listing.category}</Card.Text>
     </Card.Header>
     <Card.Body>
       <Card.Subtitle>Condition: {listing.condition}</Card.Subtitle>
@@ -31,6 +32,7 @@ Listing.propTypes = {
     negotiable: PropTypes.string,
     condition: PropTypes.string,
     description: PropTypes.string,
+    category: PropTypes.string,
     owner: PropTypes.string,
     _id: PropTypes.string,
   }).isRequired,
