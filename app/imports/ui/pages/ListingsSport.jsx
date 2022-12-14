@@ -37,7 +37,7 @@ const ListingsSport = () => {
         <Row className="justify-content-center">
           <Col md={7}>
             <Col className="text-center">
-              <h2 className="py-5">Sport Listings</h2>
+              <h2 className="py-5">Sporting Goods</h2>
             </Col>
             <Row xs={1} md={2} lg={3} className="g-4">
               {listings.map((listing) => (<Col key={listing._id}><Listing listing={listing} /></Col>))}
